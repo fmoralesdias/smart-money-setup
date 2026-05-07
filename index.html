@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Money Setup — Análise Institucional Forex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-mark">▲</span>
+    <span class="logo-text">SMART MONEY</span>
+  </div>
+  <div class="header-right">
+    <div id="clock" class="clock"></div>
+    <div class="session-pills" id="sessionPills"></div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-label">Setup institucional · Wyckoff · Elliott · Volume Profile</div>
+    <h1 class="hero-title">Veja o que as <em>baleias</em> estão fazendo</h1>
+    <p class="hero-sub">Análise de confluência multi-camada para identificar posicionamento institucional antes das sardinhas.</p>
+  </section>
+
+  <div class="controls-bar">
+    <div class="pair-group" id="pairGroup"></div>
+    <div class="tf-group" id="tfGroup"></div>
+    <button class="refresh-btn" onclick="refresh()">
+      <span class="refresh-icon">↻</span> Atualizar
+    </button>
+  </div>
+
+  <div id="alertBanner"></div>
+
+  <div class="metrics-grid" id="metricsGrid"></div>
+
+  <div class="main-grid">
+
+    <div class="col-left">
+
+      <div class="panel-card" id="chartCard">
+        <div class="card-header">
+          <span class="card-title">Mapa de níveis</span>
+          <span class="card-badge" id="chartBadge">—</span>
+        </div>
+        <canvas id="mainChart" width="600" height="280" aria-label="Gráfico de níveis institucionais"></canvas>
+        <div class="chart-legend" id="chartLegend"></div>
+      </div>
+
+      <div class="panel-card">
+        <div class="card-header">
+          <span class="card-title">Volume Profile</span>
+          <span class="card-badge vp-badge">POC · VAH · VAL</span>
+        </div>
+        <div id="vpContent"></div>
+      </div>
+
+    </div>
+
+    <div class="col-right">
+
+      <div class="panel-card hierarchy-card">
+        <div class="card-header">
+          <span class="card-title">Hierarquia de decisão</span>
+          <div class="conf-indicator" id="confIndicator"></div>
+        </div>
+        <div id="hierarchyContent"></div>
+      </div>
+
+      <div class="panel-card">
+        <div class="card-header">
+          <span class="card-title">Elliott Wave</span>
+          <span id="elliottBadge" class="card-badge">—</span>
+        </div>
+        <div id="elliottContent"></div>
+      </div>
+
+      <div class="panel-card entry-card" id="entryCard">
+        <div class="card-header">
+          <span class="card-title">Setup de entrada</span>
+          <span id="entryDirBadge" class="card-badge">—</span>
+        </div>
+        <div id="entryContent"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="panel-card zones-card">
+    <div class="card-header">
+      <span class="card-title">Zonas de confluência — Fibonacci + S/R + Volume</span>
+    </div>
+    <div id="zonesContent"></div>
+  </div>
+
+  <footer>
+    <p>Setup educacional — não é recomendação de investimento. Sempre use gestão de risco rigorosa.</p>
+  </footer>
+
+</main>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
